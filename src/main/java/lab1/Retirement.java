@@ -7,7 +7,7 @@ import org.apache.poi.ss.formula.functions.FinanceLib;
 public class Retirement {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//Added code
 				//create a scanner
 				java.util.Scanner input = new Scanner(System.in);
 				
