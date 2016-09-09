@@ -16,17 +16,28 @@ public class retirement_kexi {
 		System.out.print("Type how many years you want to work ");
 		double workYears = input.nextDouble();
 		
-		//ask for expected annual return on use's investment 
-		System.out.print("Type the expected annual return on your investment");
-		double annualReturnI = input.nextDouble();
+		//ask for expected annual return on use's investment
+		double annualReturnI;
+		do{System.out.print("Type the expected annual return on your investment");
+		annualReturnI = input.nextDouble();
+		}
+		while (annualReturnI <0 || annualReturnI > 20);
+		
+		
 		
 		//ask for how long user's want to draw
 		System.out.print("how long you want to draw");
 		double yearstoDraw = input.nextDouble();
 		
 		//ask for the annual return when user retires
-		System.out.print("What's your annual return when you retired");
-		double annualreturnR = input.nextDouble();
+		double annualreturnR;
+		do{System.out.print("What's your annual return when you retired");
+		annualreturnR = input.nextDouble();
+		}
+		while (annualreturnR <0 || annualreturnR > 3);
+		
+		
+		
 		
 		//ask for user's required income
 		System.out.print("What's your required income? ");
