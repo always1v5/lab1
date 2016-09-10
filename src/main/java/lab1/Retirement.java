@@ -64,17 +64,19 @@ public class Retirement {
 				boolean t = false;
 				  
 				// To calculate  present value 
-				double Present = FinanceLib.pv(monthReturnR, yearstoDraw * 12, payment, future, t);
+				double Present = payment*(1-1/Math.pow(1+monthReturnR/100, yearstoDraw*12))/(monthReturnR/100);
+				System.out.println(Present);
 				  
 				// To show the result of present value 
-				System.out.println("Amount you need to save is " + Present);
+				System.out.printf("Amount you need to save is$% .2f \n", Present);
 				  
 				// To calculate payment 
-				double Payment =FinanceLib.pmt(monthReturnI, workYears * 12, present, Present, t);
+				double Payment =(Present*(monthReturnI/100))/((Math.pow(1+(monthReturnI/100), workYears*12))-1) ;
 				  
 			    // To show the result of  payment
-				System.out.println("Amount you need to save each month is " + Payment);
-				  
+				System.out.printf("Amount you need to save each month is$% .2f \n", Payment); 
+				
+				 
 						
 	}
 
